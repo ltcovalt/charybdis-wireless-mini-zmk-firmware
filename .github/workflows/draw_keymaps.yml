@@ -5,8 +5,15 @@ on:
   push:
 
 jobs:
+  drift_check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: diff -u config/charybdis.json config/qwerty.json
+
   draw_base_keymap:
     name: Draw BASE keymap
+    needs: drift_check
     uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
     permissions:
       contents: write
@@ -23,6 +30,7 @@ jobs:
       artifact_name: base-keymap
       fail_on_error:  true
       debug_mode:     false
+
   draw_full_keymap:
     name: Draw FULL keymaps
     needs: draw_base_keymap
