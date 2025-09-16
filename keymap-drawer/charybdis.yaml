@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: charybdis}
 layers:
   BASE:
-  - AC SEARCH
+  - {t: ESC, h: CFG}
   - Q
   - W
   - F
@@ -12,20 +12,20 @@ layers:
   - U
   - Y
   - ''''
-  - '&td_layers'
-  - TAB
-  - {t: A, h: LCMD}
-  - {t: R, h: LALT}
+  - {t: \, h: CFG}
+  - {t: TAB, h: SYS}
+  - {t: A, h: LCTRL}
+  - {t: R, h: LEFT ALT}
   - {t: S, h: LSHFT}
-  - {t: T, h: LCTRL}
+  - {t: T, h: LEFT COMMAND}
   - G
   - M
-  - {t: N, h: RCTRL}
+  - {t: N, h: RIGHT GUI}
   - {t: E, h: RSHFT}
-  - {t: I, h: LALT}
-  - {t: O, h: RCMD}
-  - DEL
-  - '&clip_hist'
+  - {t: I, h: RIGHT ALT}
+  - {t: O, h: RCTRL}
+  - {t: '''', h: SYS}
+  - LEFT CONTROL
   - Z
   - X
   - C
@@ -33,226 +33,160 @@ layers:
   - V
   - K
   - H
-  - {t: ',', s: ;}
-  - {t: ., s: ':'}
-  - {t: '?', s: '!'}
-  - KP SLASH
-  - '&td_esc_scrl_slow'
-  - '&td_clk'
-  - '&td_bs'
+  - ','
+  - .
+  - /
   - ENTER
-  - '&td_space_nav'
-  NUM:
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - +
-  - {t: '7', h: F7}
-  - {t: '8', h: F8}
-  - {t: '9', h: F9}
-  - {t: '%', h: F10}
-  - ''
-  - {t: ▽, type: trans}
-  - ''
-  - ''
-  - ''
-  - BACKSPACE
-  - ''
-  - KP MINUS
-  - {t: '4', h: F4}
-  - {t: '5', h: F5}
-  - {t: '6', h: F6}
-  - {t: '*', h: F11}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - '='
-  - {t: '1', h: F1}
-  - {t: '2', h: F2}
-  - {t: '3', h: F3}
-  - {t: ., h: F12}
-  - KP SLASH
-  - ''
-  - ''
-  - {t: ▽, type: trans}
-  - '0'
-  - SPACE
-  NAV:
-  - ''
-  - '&msc MOVE_LEFT'
-  - '&msc MOVE_UP'
-  - ''
-  - '&msc MOVE_DOWN'
-  - '&msc MOVE_RIGHT'
-  - '&detach_session'
-  - '&create_or_attach'
-  - '&next_pane'
-  - '&show_sessions'
-  - '&sync_panes'
-  - ''
-  - TAB
-  - '&mkp MB4'
-  - LALT
-  - LSHFT
-  - LCTRL
-  - '&mkp MB5'
-  - '&h_split'
-  - LEFT ARROW
-  - DOWN
-  - UP
-  - RIGHT ARROW
-  - ''
-  - ''
-  - '&mmv MOVE_LEFT'
-  - '&mmv MOVE_DOWN'
-  - '&mmv MOVE_UP'
-  - '&mmv MOVE_RIGHT'
-  - ''
-  - '&v_split'
-  - HOME
-  - PG DN
-  - PG UP
-  - END
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - {t: ▽, type: trans}
-  SYM:
-  - ''
-  - ''
-  - ''
-  - ^
-  - '~'
-  - ''
-  - +
-  - '&'
-  - '['
-  - ']'
-  - '%'
-  - \
-  - ''
-  - ''
-  - (
-  - )
-  - BACKSPACE
-  - _
-  - KP MINUS
-  - '`'
-  - '{'
-  - '}'
-  - '*'
-  - '|'
-  - ''
-  - ''
-  - ''
-  - '#'
-  - '&home_dir'
-  - $
-  - '='
-  - '&code_blk'
-  - <
-  - '>'
-  - '@'
-  - KP SLASH
-  - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - LEFT SHIFT
+  - {t: BACKSPACE, h: NAV}
+  - {t: ENTER, h: NUM}
+  - {t: ENTER, h: NUM}
+  - {t: SPACE, h: NAV}
   GAME:
-  - '1'
-  - TAB
+  - {t: ESC, h: CFG}
+  - I
   - Q
   - W
   - E
   - R
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
   - {t: ▽, type: trans}
-  - '2'
-  - LCTRL
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: TAB, h: SYS}
+  - LEFT SHIFT
   - A
   - S
   - D
   - F
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - '3'
-  - LSHFT
-  - Y
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LCTRL
+  - Z
   - X
   - C
+  - M
   - V
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - NAV
   - SPACE
-  - LEFT ALT
-  - ''
-  - ''
-  EXTRAS:
-  - '&studio_unlock'
-  - '&shrug'
-  - '&lgtm'
-  - '&gcm'
-  - ''
-  - BRIGHTNESS INC
+  - {t: ENTER, h: NUM}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  NAV:
+  - ESC
+  - TAB
+  - BSPC
+  - UP ARROW
+  - DEL
+  - '['
+  - ']'
+  - '`'
+  - +
+  - '|'
+  - ':'
+  - '|'
+  - TAB
+  - LSHFT
+  - LEFT
+  - DOWN
+  - RIGHT
+  - (
+  - )
+  - '-'
+  - '='
+  - \
+  - ;
+  - '"'
+  - LCTRL
+  - LGUI
+  - X
+  - HOME
+  - END
+  - '{'
+  - '}'
+  - _
+  - <
+  - '>'
+  - '?'
+  - RET
+  - {t: ▽, type: trans}
+  - {t: SPACE, type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  NUM:
+  - {t: ▽, type: trans}
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ^
+  - '&'
+  - '*'
+  - (
+  - )
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - {t: ▽, type: trans}
+  - F12
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  SYS:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - VOLUME DOWN
+  - MUTE
+  - VOLUME UP
+  - BRI UP
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
   - {t: BT, h: '2'}
   - {t: BT, h: '3'}
-  - OUT TOG
+  - {t: BT, h: '4'}
   - BT CLR
-  - SLEEP
-  - '&sudo'
-  - ''
-  - ''
-  - ''
-  - BRIGHTNESS DEC
-  - ''
-  - PREVIOUS
-  - PLAY PAUSE
-  - STOP
+  - {type: held}
+  - {t: ▽, type: trans}
+  - PREV
+  - PP
   - NEXT
-  - ''
-  - AL COFFEE
-  - AC UNDO
-  - AC CUT
-  - AC COPY
-  - AC PASTE
-  - ''
-  - '&new_dir'
-  - MUTE
-  - VOLUME DOWN
-  - VOLUME UP
-  - PRINTSCREEN
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  SLOW:
+  - BRI DN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -276,6 +210,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  Mouse:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -288,6 +223,29 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mkp MB4'
+  - '&mkp MB3'
+  - '&mkp MB5'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - SNIPE
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mkp LCLK'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mkp LCLK'
+  - SCROLL
+  - '&mkp RCLK'
+  - SNIPE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -327,10 +285,94 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  SNIPE:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mkp LCLK'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mkp LCLK'
+  - '&mkp RCLK'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  CFG:
+  - {type: held}
+  - {t: BASE, h: toggle}
+  - {t: GAME, h: toggle}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&studio_unlock'
+  - '&studio_unlock'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&bootloader'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&bootloader'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -348,3 +390,5 @@ combos:
   k: '&mkp MCLK'
 - p: [27, 28]
   k: '&mkp RCLK'
+- p: [14, 15, 16]
+  k: '&caps_word'
