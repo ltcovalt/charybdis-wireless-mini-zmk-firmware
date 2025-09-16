@@ -5,25 +5,18 @@ on:
   push:
 
 jobs:
-  drift_check:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - run: diff -u config/charybdis.json config/qwerty.json
-
   draw_base_keymap:
     name: Draw BASE keymap
-    needs: drift_check
     uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
     permissions:
       contents: write
     with:
-      keymap_patterns: "config/keymap/qwerty.keymap"
+      keymap_patterns: "config/keymap/charybdis.keymap"
       config_path:    "keymap-drawer/config.yaml"
       output_folder:  "keymap-drawer/base"
       json_path:      "config"
       parse_args:     "-c 12"
-      draw_args:      "qwerty:'-s BASE --keys-only'"
+      draw_args:      "charybdis:'-s BASE --keys-only'"
       amend_commit:   false
       destination:    artifact
       commit_message: "Add BASE-layer keymaps"
@@ -38,7 +31,7 @@ jobs:
     permissions:
       contents: write
     with:
-      keymap_patterns: "config/keymap/qwerty.keymap"
+      keymap_patterns: "config/keymap/charybdis.keymap"
       config_path:    "keymap-drawer/config.yaml"
       output_folder:  "keymap-drawer"
       json_path:      "config"
