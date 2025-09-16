@@ -11,7 +11,7 @@ jobs:
     permissions:
       contents: write
     with:
-      keymap_patterns: "config/keymap/charybdis.keymap"
+      keymap_patterns: "config/charybdis.keymap"
       config_path:    "keymap-drawer/config.yaml"
       output_folder:  "keymap-drawer/base"
       json_path:      "config"
@@ -31,7 +31,7 @@ jobs:
     permissions:
       contents: write
     with:
-      keymap_patterns: "config/keymap/charybdis.keymap"
+      keymap_patterns: "config/charybdis.keymap"
       config_path:    "keymap-drawer/config.yaml"
       output_folder:  "keymap-drawer"
       json_path:      "config"
