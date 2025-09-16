@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: charybdis}
 layers:
   BASE:
-  - SEARCH
+  - AC SEARCH
   - Q
   - W
   - F
@@ -12,7 +12,7 @@ layers:
   - U
   - Y
   - ''''
-  - L_BASE L_GAME
+  - '&td_layers'
   - TAB
   - {t: A, h: LCMD}
   - {t: R, h: LALT}
@@ -25,7 +25,7 @@ layers:
   - {t: I, h: LALT}
   - {t: O, h: RCMD}
   - DEL
-  - CLIP HIST
+  - '&clip_hist'
   - Z
   - X
   - C
@@ -36,12 +36,12 @@ layers:
   - {t: ',', s: ;}
   - {t: ., s: ':'}
   - {t: '?', s: '!'}
-  - /
-  - ESC SCRL SLOW
-  - SYM LCLK
-  - BS NUM
+  - KP SLASH
+  - '&td_esc_scrl_slow'
+  - '&td_clk'
+  - '&td_bs'
   - ENTER
-  - SPACE NAV
+  - '&td_space_nav'
   NUM:
   - ''
   - ''
@@ -59,9 +59,9 @@ layers:
   - ''
   - ''
   - ''
-  - BACK SPACE
+  - BACKSPACE
   - ''
-  - '-'
+  - KP MINUS
   - {t: '4', h: F4}
   - {t: '5', h: F5}
   - {t: '6', h: F6}
@@ -78,7 +78,7 @@ layers:
   - {t: '2', h: F2}
   - {t: '3', h: F3}
   - {t: ., h: F12}
-  - /
+  - KP SLASH
   - ''
   - ''
   - {t: ▽, type: trans}
@@ -86,36 +86,36 @@ layers:
   - SPACE
   NAV:
   - ''
-  - WHEEL L
-  - WHEEL D
+  - '&msc MOVE_LEFT'
+  - '&msc MOVE_UP'
   - ''
-  - WHEEL U
-  - WHEEL R
-  - TMUX DETCH
-  - TMUX ATTCH
-  - TMUX NEXT
-  - TMUX SESH
-  - TMUX SYNC
+  - '&msc MOVE_DOWN'
+  - '&msc MOVE_RIGHT'
+  - '&detach_session'
+  - '&create_or_attach'
+  - '&next_pane'
+  - '&show_sessions'
+  - '&sync_panes'
   - ''
   - TAB
-  - BACK
+  - '&mkp MB4'
   - LALT
   - LSHFT
   - LCTRL
-  - FWD
-  - HSPLIT
-  - LEFT
+  - '&mkp MB5'
+  - '&h_split'
+  - LEFT ARROW
   - DOWN
   - UP
-  - RIGHT
+  - RIGHT ARROW
   - ''
   - ''
-  - MOVE L
-  - MOVE D
-  - MOVE UP
-  - MOVE R
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_UP'
+  - '&mmv MOVE_RIGHT'
   - ''
-  - VSPLIT
+  - '&v_split'
   - HOME
   - PG DN
   - PG UP
@@ -143,9 +143,9 @@ layers:
   - ''
   - (
   - )
-  - BACK SPACE
+  - BACKSPACE
   - _
-  - '-'
+  - KP MINUS
   - '`'
   - '{'
   - '}'
@@ -155,14 +155,14 @@ layers:
   - ''
   - ''
   - '#'
-  - ~/
+  - '&home_dir'
   - $
   - '='
-  - '```'
+  - '&code_blk'
   - <
   - '>'
   - '@'
-  - /
+  - KP SLASH
   - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -211,12 +211,12 @@ layers:
   - ''
   - ''
   EXTRAS:
-  - ZMK Studio
-  - SHRUG
-  - LGTM
-  - GIT COMMIT
+  - '&studio_unlock'
+  - '&shrug'
+  - '&lgtm'
+  - '&gcm'
   - ''
-  - BRIGHT ▲
+  - BRIGHTNESS INC
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
   - {t: BT, h: '2'}
@@ -224,28 +224,28 @@ layers:
   - OUT TOG
   - BT CLR
   - SLEEP
-  - sudo!!
+  - '&sudo'
   - ''
   - ''
   - ''
-  - BRIGHT ▼
+  - BRIGHTNESS DEC
   - ''
   - PREVIOUS
   - PLAY PAUSE
   - STOP
   - NEXT
   - ''
-  - LOCK
-  - UNDO
-  - CUT
-  - COPY
-  - PASTE
+  - AL COFFEE
+  - AC UNDO
+  - AC CUT
+  - AC COPY
+  - AC PASTE
   - ''
-  - NEW DIR
+  - '&new_dir'
   - MUTE
   - VOLUME DOWN
   - VOLUME UP
-  - PRINT SCREEN
+  - PRINTSCREEN
   - ''
   - ''
   - ''
@@ -338,13 +338,13 @@ layers:
   - {t: ▽, type: trans}
 combos:
 - p: [17, 18]
-  k: CAPS WORD
+  k: '&caps_word'
   l: [BASE]
 - p: [38, 39]
-  k: L_BASE L_EXTRA
+  k: '&td_bore'
 - p: [25, 26]
-  k: L CLK
+  k: '&mkp LCLK'
 - p: [26, 27]
-  k: Mid CLK
+  k: '&mkp MCLK'
 - p: [27, 28]
-  k: R CLK
+  k: '&mkp RCLK'
