@@ -1,8 +1,47 @@
 layout: {zmk_keyboard: charybdis}
 layers:
-  BASE: [AC SEARCH, Q, W, F, P, B, J, L, U, Y, '''', '&td_layers', TAB, '&ht_left LCMD A', '&ht_left LALT R', '&ht_left LSHFT S', '&ht_left LCTRL T', G, M, '&ht_right
-      RCTRL N', '&ht_right RSHFT E', '&ht_right LALT I', '&ht_right RCMD O', DEL, '&clip_hist', Z, X, C, D, V, K, H, '&mm_cm_sc', '&mm_pr_col', '&mm_qm_ex', KP SLASH,
-    '&td_esc_scrl_slow', '&td_clk', '&td_bs', ENTER, '&td_space_nav']
+  BASE:
+  - AC SEARCH
+  - Q
+  - W
+  - F
+  - P
+  - B
+  - J
+  - L
+  - U
+  - Y
+  - ''''
+  - '&td_layers'
+  - TAB
+  - {t: A, h: LCMD}
+  - {t: R, h: LALT}
+  - {t: S, h: LSHFT}
+  - {t: T, h: LCTRL}
+  - G
+  - M
+  - {t: N, h: RCTRL}
+  - {t: E, h: RSHFT}
+  - {t: I, h: LALT}
+  - {t: O, h: RCMD}
+  - DEL
+  - '&clip_hist'
+  - Z
+  - X
+  - C
+  - D
+  - V
+  - K
+  - H
+  - {t: ',', s: ;}
+  - {t: ., s: ':'}
+  - {t: '?', s: '!'}
+  - KP SLASH
+  - '&td_esc_scrl_slow'
+  - '&td_clk'
+  - '&td_bs'
+  - ENTER
+  - '&td_space_nav'
   NUM:
   - ''
   - ''
@@ -11,10 +50,10 @@ layers:
   - ''
   - ''
   - +
-  - '&ht_num_func F7 N7'
-  - '&ht_num_func F8 N8'
-  - '&ht_num_func F9 N9'
-  - '&ht_num_func F10 PRCNT'
+  - {t: '7', h: F7}
+  - {t: '8', h: F8}
+  - {t: '9', h: F9}
+  - {t: '%', h: F10}
   - ''
   - {t: ▽, type: trans}
   - ''
@@ -23,10 +62,10 @@ layers:
   - BACKSPACE
   - ''
   - KP MINUS
-  - '&ht_num_func F4 N4'
-  - '&ht_num_func F5 N5'
-  - '&ht_num_func F6 N6'
-  - '&ht_num_func F11 ASTRK'
+  - {t: '4', h: F4}
+  - {t: '5', h: F5}
+  - {t: '6', h: F6}
+  - {t: '*', h: F11}
   - ''
   - ''
   - ''
@@ -35,10 +74,10 @@ layers:
   - ''
   - ''
   - '='
-  - '&ht_num_func F1 N1'
-  - '&ht_num_func F2 N2'
-  - '&ht_num_func F3 N3'
-  - '&ht_num_func F12 DOT'
+  - {t: '1', h: F1}
+  - {t: '2', h: F2}
+  - {t: '3', h: F3}
+  - {t: ., h: F12}
   - KP SLASH
   - ''
   - ''
@@ -297,3 +336,15 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+combos:
+- p: [17, 18]
+  k: '&caps_word'
+  l: [BASE]
+- p: [38, 39]
+  k: '&td_bore'
+- p: [25, 26]
+  k: '&mkp LCLK'
+- p: [26, 27]
+  k: '&mkp MCLK'
+- p: [27, 28]
+  k: '&mkp RCLK'
