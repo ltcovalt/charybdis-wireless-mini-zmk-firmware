@@ -69,6 +69,7 @@ This will give you an interactive bash prompt with all dependencies loaded, so y
 ```bash
 docker-compose run --rm --entrypoint bash builder
 ```
+
 Once inside the shell, you can execute the script manually, or go troubleshooting:
 
 ```bash
@@ -94,9 +95,10 @@ bash ./local-build/build_setup.sh
       - CONFIG_LOG_MODE_DEFERRED=n
 - If the firmware is not generated as expected, use the interactive shell method above to inspect `/workspaces/zmk-firmwares` or rerun the script with debugging.
 - Check the script output for any warnings or errors about missing shields, keymaps, or build failures. If you'd like to save the script output to a file for local parsing in a text editor start the build container with this command:
-  ```bash
+
+```bash
   docker-compose run --rm builder > logs.txt 2>&1
-  ```
+```
 
 ---
 
