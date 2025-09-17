@@ -38,7 +38,7 @@ layers:
   - /
   - ENTER
   - LEFT SHIFT
-  - {t: BACKSPACE, h: NAV}
+  - {t: BACK SPACE, h: NAV}
   - {t: ENTER, h: NUM}
   - {t: ENTER, h: NUM}
   - {t: SPACE, h: NAV}
@@ -151,7 +151,7 @@ layers:
   - '9'
   - '0'
   - {t: ▽, type: trans}
-  - F12
+  - DEV TOOLS
   - F1
   - F2
   - F3
