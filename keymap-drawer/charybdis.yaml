@@ -171,9 +171,9 @@ layers:
   SYS:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - VOLUME DOWN
-  - MUTE
   - VOLUME UP
+  - MUTE
+  - PREV
   - BRI UP
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
@@ -183,7 +183,7 @@ layers:
   - BT CLR
   - {type: held}
   - {t: ▽, type: trans}
-  - PREV
+  - VOLUME DOWN
   - PP
   - NEXT
   - BRI DN
@@ -378,3 +378,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+combos:
+- p: [16, 15]
+  k: '&mkp LCLK'
+  l: [BASE]
+- p: [27, 28]
+  k: '&mkp RCLK'
+  l: [BASE]
