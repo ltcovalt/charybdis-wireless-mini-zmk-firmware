@@ -25,5 +25,6 @@
 			&zip_scroll_scaler 1 32 /* scale scroll speed */
 			&zip_xy_to_scroll_mapper /* convert xy movement to scroll events */
 			&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT /* invert vertical scroll direction */
+		>;
 	};
 };
