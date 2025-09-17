@@ -144,8 +144,7 @@ jobs:
 
           # studio RPC only on right half of BT builds
           if [[ "$FM" == "bt" && "$SH" == *right ]]; then
-            # SNIPPET_OPTION="-DSNIPPET=studio-rpc-usb-uart"
-          SNIPPET_OPTION=""
+            SNIPPET_OPTION="-DSNIPPET=studio-rpc-usb-uart"
           else
             SNIPPET_OPTION=""
           fi
