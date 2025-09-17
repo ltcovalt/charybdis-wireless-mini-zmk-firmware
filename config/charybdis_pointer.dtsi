@@ -7,10 +7,9 @@
 		#input-processor-cells = <2>;
 		require-prior-idle-ms = <1000>;
 	};
-}
+};
 
 &trackball_listener {
-
 	/* base processor chain on all layers, auto-activate mouse layer 5 on input */
 	input-processors = <&zip_xy_scaler 5 5>, <&zip_temp_layer 5 1000>;
 
