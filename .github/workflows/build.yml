@@ -136,20 +136,30 @@ jobs:
 
         mkdir -p "$GITHUB_WORKSPACE/out/$NM"
         CONFIG_DIR="$GITHUB_WORKSPACE/config"
-        
-        # ──────────────────────────────────────────────────────────────
 
         for SH in ${LIST[$FM]}; do
           BUILD_DIR=$(mktemp -d)
 
-          # studio RPC only on right half of BT builds
+          # dump useful logs if anything fails in this iteration
+          trap 'echo "—— build failed — dumping logs ——"; \
+                find "$BUILD_DIR/zephyr" -maxdepth 1 -type f \( -name "CMakeError.log" -o -name "CMakeOutput.log" -o -name "build.log" -o -name "*.err" \) -print -exec sed -n "1,200p" {} \; || true; \
+                exit 1' ERR
+
+          # Decide Studio RPC snippet only for bt + right; pick one that exists
+          SNIPPET_OPTION=""
           if [[ "$FM" == "bt" && "$SH" == *right ]]; then
-            SNIPPET_OPTION="-DSNIPPET=studio-rpc-usb-uart"
-          else
-            SNIPPET_OPTION=""
+            echo "↪ Checking available snippets in $(pwd)/snippets:"
+            ls -1 snippets/ || true
+            for CAND in studio-rpc-usb-uart studio-rpc-usb studio-rpc; do
+              if [[ -f "snippets/${CAND}.conf" ]]; then
+                SNIPPET_OPTION="-DSNIPPET=${CAND}"
+                break
+              fi
+            done
+            echo "↪ Selected snippet: ${SNIPPET_OPTION:-<none found>}"
           fi
 
-          # set keymap
+          # Set keymap
           if [[ "$FM" != "reset" ]]; then
             KEYMAP_OPTION="-DKEYMAP_FILE=overlays/charybdis.keymap"
           else
@@ -164,21 +174,11 @@ jobs:
           echo "→ Name         (NM): $NM"
           echo "→ Board        (BD): $BD"
           echo "→ Current directory: $(pwd)"
-          echo "→ KEYMAP_OPTION    :$KEYMAP_OPTION"
-          echo "→ SNIPPET_OPTION   :$SNIPPET_OPTION"
+          echo "→ KEYMAP_OPTION    : $KEYMAP_OPTION"
+          echo "→ SNIPPET_OPTION   : $SNIPPET_OPTION"
           echo "→ Build dir        : $BUILD_DIR"
-          # echo "→ Directory contents:"
-          # tree .
-          # echo "📍 Showing current build directory and listing contents:"
-          # echo "GITHUB_WORKSPACE:"
-          # tree $GITHUB_WORKSPACE
 
           echo "🛠 Kicking off the firmware build..."
-          trap 'echo "—— build failed — dumping logs ——"; \
-            find "$BUILD_DIR/zephyr" -maxdepth 1 -type f \( -name "CMakeError.log" -o -name "CMakeOutput.log" -o -name "zephyr.lst" -o -name "build.log" \) -print -exec sed -n "1,200p" {} \; || true; \
-            exit 1' ERR
-
-
           west build -p \
             -d "$BUILD_DIR" \
             -b "$BD" \
