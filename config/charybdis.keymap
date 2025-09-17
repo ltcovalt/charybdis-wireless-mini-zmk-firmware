@@ -79,8 +79,18 @@
 
         right_click {
             bindings = <&mkp RCLK>;
-            key-positions = <27 28>;
+            key-positions = <14 15>;
             layers = <0 5 7>;
+        };
+
+        left_click {
+            bindings = <&mkp LCLK>;
+            key-positions = <31 32>;
+        };
+
+        right_click {
+            bindings = <&mkp RCLK>;
+            key-positions = <32 33>;
         };
     };
 
