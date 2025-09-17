@@ -382,6 +382,10 @@ combos:
 - p: [16, 15]
   k: '&mkp LCLK'
   l: [BASE, MOUSE, SNIPE]
-- p: [27, 28]
+- p: [14, 15]
   k: '&mkp RCLK'
   l: [BASE, MOUSE, SNIPE]
+- p: [31, 32]
+  k: '&mkp LCLK'
+- p: [32, 33]
+  k: '&mkp RCLK'
