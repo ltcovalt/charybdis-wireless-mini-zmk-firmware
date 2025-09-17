@@ -381,7 +381,7 @@ layers:
 combos:
 - p: [16, 15]
   k: '&mkp LCLK'
-  l: [BASE]
+  l: [BASE, MOUSE, SNIPE]
 - p: [27, 28]
   k: '&mkp RCLK'
-  l: [BASE]
+  l: [BASE, MOUSE, SNIPE]
