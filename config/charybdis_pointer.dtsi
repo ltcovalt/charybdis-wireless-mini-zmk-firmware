@@ -15,7 +15,7 @@
 
 	snipe {
 		layers = <7>;
-		input-processors = <&zip_xy_scaler 1 8>;
+		input-processors = <&zip_xy_scaler 1 4>;
 	};
 
 	scroll {
