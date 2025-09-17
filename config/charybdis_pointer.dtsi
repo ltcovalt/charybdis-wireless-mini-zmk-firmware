@@ -14,12 +14,12 @@
 	input-processors = <&zip_xy_scaler 4 5>, <&zip_temp_layer 5 1000>;
 
 	snipe {
-		layers = <7>;
+		layers = <2 7>;
 		input-processors = <&zip_xy_scaler 1 4>;
 	};
 
 	scroll {
-		layers = <6>;
+		layers = <3 6>;
 		input-processors = <
 			&zip_xy_to_scroll_mapper /* convert xy movement to scroll events */
 			&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT /* invert vertical scroll direction */
