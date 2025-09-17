@@ -1,23 +1,29 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 
+/ {
+	zip_temp_layer: zip_temp_layer {
+		compatible = "zmk,input-processor-temp-layer";
+		#input-processor-cells = <2>;
+		require-prior-idle-ms = <1000>;
+	};
+}
+
 &trackball_listener {
-    /* base processor chain on all layers */
-    input-processors = <&zip_xy_scaler 5 5>;
 
-    /* layer-8 scroll override */
-    scroller: scroller {
-        layers           = <7>;
-        input-processors = <
-            &zip_xy_scaler 1 16 /* Scales the scroll speed */
-            &zip_xy_to_scroll_mapper /* Converts XY movement to scroll events */
-            &zip_scroll_transform INPUT_TRANSFORM_Y_INVERT /* Inverts the scroll direction */
-        >;
-    };
+	/* base processor chain on all layers, auto-activate mouse layer 5 on input */
+	input-processors = <&zip_xy_scaler 5 5>, <&zip_temp_layer 5 1000>;
 
-    /* layer-7 slow-pointer override */
-    slow_pointer: slow_pointer {
-        layers           = <6>;
-        input-processors = <&zip_xy_scaler 1 8>;
-    };
+	snipe: {
+		layers = <7>;
+		input-processors = <&zip_xy_scaler 1 16>;
+	};
+
+	scroll {
+		layers = <6>;
+		input-processors = <
+			&zip_scroll_scaler 1 32 /* scale scroll speed */
+			&zip_xy_to_scroll_mapper /* convert xy movement to scroll events */
+			&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT /* invert vertical scroll direction */
+	};
 };
