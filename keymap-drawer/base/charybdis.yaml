@@ -210,7 +210,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  Mouse:
+  MOUSE:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -379,6 +379,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
+- p: [14, 15, 16]
+  k: '&caps_word'
 - p: [17, 18]
   k: '&caps_word'
   l: [BASE]
@@ -390,5 +392,3 @@ combos:
   k: '&mkp MCLK'
 - p: [27, 28]
   k: '&mkp RCLK'
-- p: [14, 15, 16]
-  k: '&caps_word'
