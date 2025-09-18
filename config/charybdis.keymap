@@ -92,6 +92,16 @@
             bindings = <&mkp RCLK>;
             key-positions = <32 33>;
         };
+
+        scroll_l {
+            bindings = <&mo 6>;
+            key-positions = <14 15 16>;
+        };
+
+        scroll_r {
+            bindings = <&mo 6>;
+            key-positions = <31 32 33>;
+        };
     };
 
     keymap {
@@ -101,7 +111,7 @@
             bindings = <
 &lt 8 ESC         &kp Q          &kp W             &kp F           &kp P                 &kp B          &kp J        &kp L              &kp U          &kp Y              &kp SQT        &lt 8 BACKSLASH
 &lt 4 TAB         &hrml LCTRL A  &hrml LEFT_ALT R  &hrml LSHFT S   &hrml LEFT_COMMAND T  &kp G          &kp M        &hrmr RIGHT_GUI N  &hrmr RSHFT E  &hrmr RIGHT_ALT I  &hrmr RCTRL O  &lt 4 SQT
-&kp LEFT_CONTROL  &kp Z          &kp X             &kp C           &kp D                 &kp V          &kp K        &kp H              &kp COMMA      &kp PERIOD         &kp SLASH      &kp ENTER
+&kp LEFT_CONTROL  &kp Z          &kp X             &kp C           &kp D                 &kp V          &kp K        &kp H              &kp COMMA      &kp PERIOD         &lt 7 SLASH    &kp ENTER
                                                    &kp LEFT_SHIFT  &lt 2 BACKSPACE       &lt 3 ENTER    &lt 3 ENTER  &lt 2 SPACE
             >;
         };
@@ -144,9 +154,9 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans  &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans  &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &mkp LCLK  &trans  &mkp RCLK  &mo 7   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &mo 7   &trans
                         &trans  &trans  &trans    &trans  &trans
             >;
         };
@@ -162,10 +172,10 @@
 
         SNIPE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans     &trans    &trans  &trans     &trans    &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans     &trans    &trans  &mkp MB4   &mkp MB3  &mkp MB5   &trans  &trans
-&trans  &trans  &trans  &trans  &mkp LCLK  &trans    &trans  &mkp LCLK  &trans    &mkp RCLK  &trans  &trans
-                        &trans  &trans     &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans
             >;
         };
 
