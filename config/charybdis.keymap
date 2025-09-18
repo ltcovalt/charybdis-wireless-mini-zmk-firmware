@@ -71,24 +71,24 @@
     combos {
         compatible = "zmk,combos";
 
-        left_click {
+        left_click_l {
             bindings = <&mkp LCLK>;
             key-positions = <16 15>;
             layers = <0 5 7>;
         };
 
-        right_click {
+        right_click_l {
             bindings = <&mkp RCLK>;
             key-positions = <14 15>;
             layers = <0 5 7>;
         };
 
-        left_click {
+        left_click_r {
             bindings = <&mkp LCLK>;
             key-positions = <31 32>;
         };
 
-        right_click {
+        right_click_r {
             bindings = <&mkp RCLK>;
             key-positions = <32 33>;
         };
