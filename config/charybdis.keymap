@@ -74,13 +74,13 @@
         left_click_l {
             bindings = <&mkp LCLK>;
             key-positions = <16 15>;
-            layers = <0 5 7>;
+            layers = <0 5 7 2 3>;
         };
 
         right_click_l {
             bindings = <&mkp RCLK>;
             key-positions = <14 15>;
-            layers = <0 5 7>;
+            layers = <0 5 7 2 3>;
         };
 
         left_click_r {
