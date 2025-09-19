@@ -2,6 +2,11 @@
 #include <dt-bindings/zmk/input_transform.h>
 
 / {
+	/* 
+	 * auto-mouse layer definition
+	 * to auto-enable, add <&zip_temp_layer 5 1000> to input-processors
+	 * of the trackball_listener, where 5 is the mouse layer and 1000 is the timeout in ms
+	 */
 	zip_temp_layer: zip_temp_layer {
 		compatible = "zmk,input-processor-temp-layer";
 		#input-processor-cells = <2>;
@@ -11,19 +16,21 @@
 
 &trackball_listener {
 	/* base processor chain on all layers, auto-activate mouse layer 5 on input */
-	input-processors = <&zip_xy_scaler 4 5>, <&zip_temp_layer 5 1000>;
+	input-processors = <&zip_xy_scaler 4 5>;
 
 	snipe {
+		/* slow scroll on NAV and SNIPE layers */
 		layers = <2 7>;
 		input-processors = <&zip_xy_scaler 1 4>;
 	};
 
 	scroll {
+		/* trackball scroll on NUM and SCROLL layer */
 		layers = <3 6>;
 		input-processors = <
 			&zip_xy_to_scroll_mapper /* convert xy movement to scroll events */
 			&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT /* invert vertical scroll direction */
-			&zip_scroll_scaler 1 32 /* scale scroll speed */
+			&zip_scroll_scaler 1 48 /* scale scroll speed */
 		>;
 	};
 };

@@ -1,3 +1,5 @@
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+
 #define INPUT_EV_KEY 0x01               /* < Key event */
 #define INPUT_EV_REL 0x02               /* < Relative coordinate event */
 #define INPUT_EV_ABS 0x03               /* < Absolute coordinate event */
@@ -9,7 +11,7 @@
 #define INPUT_REL_Y 0x01                /* < Relative Y coordinate */
 #define INPUT_REL_WHEEL 0x08            /* < Relative wheel coordinate */
 #define INPUT_REL_HWHEEL 0x06           /* < Relative horizontal wheel coordinate */
-#define INPUT_REL_MISC 0x09             /* < Relative misc coordinate */
+#define INPUT_REL_MISC 0x09  /* < Relative misc coordinate */
 
 &pinctrl {
 	spi0_default: spi0_default {
@@ -30,8 +32,6 @@
 	};
 };
 
-#include <zephyr/dt-bindings/input/input-event-codes.h>
-
 &spi0 {
 	status = "okay";
 	compatible = "nordic,nrf-spim";
@@ -46,7 +46,7 @@
 		reg = <0>;
 		spi-max-frequency = <2000000>;
 		irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-		cpi = <600>;
+		cpi = <800>;
 		evt-type = <INPUT_EV_REL>;
 		x-input-code = <INPUT_REL_X>;
 		y-input-code = <INPUT_REL_Y>;
