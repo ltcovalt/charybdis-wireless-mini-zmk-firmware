@@ -43,7 +43,7 @@ layers:
   - {t: ENTER, h: NUM}
   - {t: SPACE, h: NAV}
   GAME:
-  - {t: ESC, h: CFG}
+  - ESCAPE
   - I
   - Q
   - W
@@ -55,7 +55,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: TAB, h: SYS}
+  - TAB
   - LEFT SHIFT
   - A
   - S
