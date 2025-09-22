@@ -116,8 +116,13 @@
 
         left_click_r2 {
             bindings = <&mkp LCLK>;
-            key-positions = <31 32>;
+            key-positions = <19 20>;
             require-prior-idle-ms = <50>;
+        };
+
+        scroll_r2 {
+            bindings = <&mo 6>;
+            key-positions = <19 20 21>;
         };
     };
 
