@@ -395,5 +395,7 @@ combos:
   k: SCROLL
 - p: [20, 21]
   k: '&mkp RCLK'
-- p: [31, 32]
+- p: [19, 20]
   k: '&mkp LCLK'
+- p: [19, 20, 21]
+  k: SCROLL
