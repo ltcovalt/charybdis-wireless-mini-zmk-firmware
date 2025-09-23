@@ -16,12 +16,18 @@
 
 &trackball_listener {
 	/* base processor chain on all layers, auto-activate mouse layer 5 on input */
-	input-processors = <&zip_xy_scaler 5 8>;
+	input-processors = <
+		&zip_xy_threshold 2 /* ignore small movements */
+		&zip_xy_lowpass 8 /* smooth out movements */
+		&zip_xy_scaler 5 8 /* scale cursor speed */
+	>;
 
 	snipe {
 		/* slow scroll on NAV and SNIPE layers */
 		layers = <2 7>;
-		input-processors = <&zip_xy_scaler 1 4>;
+		input-processors = <
+			&zip_xy_scaler 1 5
+		>;
 	};
 
 	scroll {
