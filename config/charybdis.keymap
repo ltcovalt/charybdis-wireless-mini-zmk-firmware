@@ -76,22 +76,26 @@
             bindings = <&mkp LCLK>;
             key-positions = <16 15>;
             layers = <0 5 7 2 3>;
+            require-prior-idle-ms = <50>;
         };
 
         right_click_l {
             bindings = <&mkp RCLK>;
             key-positions = <14 15>;
             layers = <0 5 7 2 3>;
+            require-prior-idle-ms = <50>;
         };
 
         left_click_r {
             bindings = <&mkp LCLK>;
             key-positions = <31 32>;
+            require-prior-idle-ms = <50>;
         };
 
         right_click_r {
             bindings = <&mkp RCLK>;
             key-positions = <32 33>;
+            require-prior-idle-ms = <50>;
         };
 
         scroll_l {
@@ -102,6 +106,23 @@
         scroll_r {
             bindings = <&mo 6>;
             key-positions = <31 32 33>;
+        };
+
+        right_click_r2 {
+            bindings = <&mkp RCLK>;
+            key-positions = <20 21>;
+            require-prior-idle-ms = <50>;
+        };
+
+        left_click_r2 {
+            bindings = <&mkp LCLK>;
+            key-positions = <19 20>;
+            require-prior-idle-ms = <50>;
+        };
+
+        scroll_r2 {
+            bindings = <&mo 6>;
+            key-positions = <19 20 21>;
         };
     };
 
