@@ -15,11 +15,9 @@
 };
 
 &trackball_listener {
-	/* base processor chain on all layers, auto-activate mouse layer 5 on input */
+	/* base processor chain on all layers */
 	input-processors = <
-		&zip_xy_threshold 2 /* ignore small movements */
-		&zip_xy_lowpass 8 /* smooth out movements */
-		&zip_xy_scaler 5 8 /* scale cursor speed */
+		&zip_xy_scaler 5 8 /* scale cursor speed, max values are 16/16 */
 	>;
 
 	snipe {
