@@ -123,9 +123,9 @@
 
         BASE {
             bindings = <
-&lt 8 ESC         &kp Q          &kp W             &kp F           &kp P                 &kp B             &kp J           &kp L              &kp U          &kp Y              &kp SQT        &lt 8 BACKSLASH
+&kp ESCAPE        &kp Q          &kp W             &kp F           &kp P                 &kp B             &kp J           &kp L              &kp U          &kp Y              &kp SQT        &kp BACKSLASH
 &lt 4 TAB         &hrml LCTRL A  &hrml LEFT_ALT R  &hrml LSHFT S   &hrml LEFT_COMMAND T  &kp G             &kp M           &hrmr RIGHT_GUI N  &hrmr RSHFT E  &hrmr RIGHT_ALT I  &hrmr RCTRL O  &lt 4 SQT
-&kp LEFT_CONTROL  &kp Z          &kp X             &kp C           &kp D                 &kp V             &kp K           &kp H              &kp COMMA      &kp PERIOD         &lt 7 SLASH    &kp ENTER
+&kp LEFT_CONTROL  &kp Z          &kp X             &kp C           &kp D                 &kp V             &kp K           &kp H              &kp COMMA      &kp PERIOD         &lt 7 SLASH    &trans
                                                    &kp LEFT_SHIFT  &lt 2 BACKSPACE       &lt_ph 3 ENTER    &lt_ph 3 ENTER  &lt 2 SPACE
             >;
         };
@@ -141,9 +141,9 @@
 
         NAV {
             bindings = <
-&kp ESC    &kp TAB    &kp BSPC  &kp UP_ARROW  &kp DEL    &kp LBKT                &kp RBKT               &kp GRAVE       &kp PLUS       &kp PIPE          &kp COLON     &kp PIPE
+&kp ESC    &trans     &kp BSPC  &kp UP_ARROW  &kp DEL    &kp LBKT                &kp RBKT               &kp GRAVE       &kp PLUS       &kp PIPE          &kp COLON     &kp PIPE
 &kp TAB    &kp LSHFT  &kp LEFT  &kp DOWN      &kp RIGHT  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp MINUS       &kp EQUAL      &kp BSLH          &kp SEMI      &kp DOUBLE_QUOTES
-&kp LCTRL  &kp LGUI   &kp X     &kp HOME      &kp END    &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp UNDERSCORE  &kp LESS_THAN  &kp GREATER_THAN  &kp QUESTION  &kp RET
+&kp LCTRL  &kp LGUI   &trans    &kp HOME      &kp END    &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp UNDERSCORE  &kp LESS_THAN  &kp GREATER_THAN  &kp QUESTION  &kp RET
                                 &trans        &kp SPACE  &trans                  &trans                 &trans
             >;
         };
@@ -159,9 +159,9 @@
 
         SYS {
             bindings = <
-&trans  &trans  &kp C_VOLUME_UP    &kp C_MUTE  &kp C_PREV  &kp C_BRI_UP    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&trans  &trans  &kp C_VOLUME_DOWN  &kp C_PP    &kp C_NEXT  &kp C_BRI_DN    &trans        &trans        &trans        &trans        &trans        &trans
-&trans  &trans  &trans             &trans      &trans      &trans          &trans        &trans        &trans        &trans        &trans        &trans
+&trans       &to 0   &to 1         &trans      &trans      &trans          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
+&trans       &trans  &kp C_VOL_UP  &kp C_PP    &kp C_NEXT  &kp C_BRI_UP    &trans        &trans        &trans        &trans        &trans        &trans
+&bootloader  &trans  &kp C_VOL_DN  &kp C_MUTE  &kp C_PREV  &kp C_BRI_DN    &trans        &trans        &trans        &trans        &trans        &bootloader
                                    &trans      &trans      &trans          &trans        &trans
             >;
         };
@@ -190,15 +190,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans
-            >;
-        };
-
-        CFG {
-            bindings = <
-&trans       &to 0   &to 1   &trans  &trans  &studio_unlock    &studio_unlock  &trans  &trans  &trans  &trans  &trans
-&trans       &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans
-&bootloader  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &bootloader
-                             &trans  &trans  &trans            &trans          &trans
             >;
         };
     };
