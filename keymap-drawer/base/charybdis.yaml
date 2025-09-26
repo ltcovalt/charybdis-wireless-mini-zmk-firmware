@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: charybdis}
 layers:
   BASE:
-  - {t: ESC, h: CFG}
+  - ESCAPE
   - Q
   - W
   - F
@@ -12,7 +12,7 @@ layers:
   - U
   - Y
   - ''''
-  - {t: \, h: CFG}
+  - \
   - {t: TAB, h: SYS}
   - {t: A, h: LCTRL}
   - {t: R, h: LEFT ALT}
@@ -36,7 +36,7 @@ layers:
   - ','
   - .
   - {t: /, h: SNIPE}
-  - ENTER
+  - {t: ▽, type: trans}
   - LEFT SHIFT
   - {t: BACK SPACE, h: NAV}
   - {t: ENTER, h: NUM}
@@ -86,7 +86,7 @@ layers:
   - {t: ▽, type: trans}
   NAV:
   - ESC
-  - TAB
+  - {t: ▽, type: trans}
   - BSPC
   - UP ARROW
   - DEL
@@ -111,7 +111,7 @@ layers:
   - '"'
   - LCTRL
   - LGUI
-  - X
+  - {t: ▽, type: trans}
   - HOME
   - END
   - '{'
@@ -170,11 +170,11 @@ layers:
   - {t: ▽, type: trans}
   SYS:
   - {t: ▽, type: trans}
+  - {t: BASE, h: toggle}
+  - {t: GAME, h: toggle}
   - {t: ▽, type: trans}
-  - VOLUME UP
-  - MUTE
-  - PREV
-  - BRI UP
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
   - {t: BT, h: '2'}
@@ -183,28 +183,28 @@ layers:
   - BT CLR
   - {type: held}
   - {t: ▽, type: trans}
-  - VOLUME DOWN
+  - VOL UP
   - PP
   - NEXT
+  - BRI UP
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&bootloader'
+  - {t: ▽, type: trans}
+  - VOL DN
+  - MUTE
+  - PREV
   - BRI DN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&bootloader'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -331,48 +331,6 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  CFG:
-  - {type: held}
-  - {t: BASE, h: toggle}
-  - {t: GAME, h: toggle}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '&studio_unlock'
-  - '&studio_unlock'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '&bootloader'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '&bootloader'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
