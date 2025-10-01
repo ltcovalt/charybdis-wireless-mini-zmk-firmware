@@ -148,7 +148,7 @@
         BASE {
             bindings = <
 &kp ESCAPE        &kp Q                       &kp W                          &kp F           &kp P                 &kp B             &kp J           &kp L              &kp U          &kp Y                           &kp SQT                     &kp BACKSLASH
-&lt 4 TAB         &hmrl_hold_trigger LCTRL A  &hmrl_hold_trigger LEFT_ALT R  &hrml LSHFT S   &hrml LEFT_COMMAND T  &kp G             &kp M           &hrmr RIGHT_GUI N  &hrmr RSHFT E  &hmrl_hold_trigger RIGHT_ALT I  &hrmr_hold_trigger RCTRL O  &lt 4 SQT
+&lt 4 TAB         &hmrl_hold_trigger LCTRL A  &hmrl_hold_trigger LEFT_ALT R  &hrml LSHFT S   &hrml LEFT_COMMAND T  &kp G             &kp M           &hrmr RIGHT_GUI N  &hrmr RSHFT E  &hrmr_hold_trigger RIGHT_ALT I  &hrmr_hold_trigger RCTRL O  &lt 4 SQT
 &kp LEFT_CONTROL  &kp Z                       &kp X                          &kp C           &kp D                 &kp V             &kp K           &kp H              &kp COMMA      &kp PERIOD                      &lt 7 SLASH                 &trans
                                                                              &kp LEFT_SHIFT  &lt 2 BACKSPACE       &lt_ph 3 ENTER    &lt_ph 3 ENTER  &lt 2 SPACE
             >;
