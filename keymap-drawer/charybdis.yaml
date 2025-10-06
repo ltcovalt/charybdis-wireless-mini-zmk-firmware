@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: charybdis}
 layers:
   BASE:
-  - ESCAPE
+  - TAB
   - Q
   - W
   - F
@@ -13,7 +13,7 @@ layers:
   - Y
   - ''''
   - \
-  - {t: TAB, h: SYS}
+  - {t: ESCAPE, h: SYS}
   - {t: A, h: LCTRL}
   - {t: R, h: LEFT ALT}
   - {t: S, h: LSHFT}
@@ -43,7 +43,7 @@ layers:
   - {t: ENTER, h: NUM}
   - {t: SPACE, h: NAV}
   GAME:
-  - ESCAPE
+  - TAB
   - I
   - Q
   - W
@@ -55,7 +55,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - TAB
+  - ESCAPE
   - LEFT SHIFT
   - A
   - S
@@ -85,7 +85,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   NAV:
-  - ESC
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - BSPC
   - UP ARROW
@@ -97,7 +97,7 @@ layers:
   - '|'
   - ':'
   - '|'
-  - TAB
+  - {t: ▽, type: trans}
   - LSHFT
   - LEFT
   - DOWN
