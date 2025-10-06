@@ -147,8 +147,8 @@
 
         BASE {
             bindings = <
-&kp ESCAPE        &kp Q                       &kp W                          &kp F           &kp P                 &kp B             &kp J           &kp L              &kp U          &kp Y                           &kp SQT                     &kp BACKSLASH
-&lt 4 TAB         &hmrl_hold_trigger LCTRL A  &hmrl_hold_trigger LEFT_ALT R  &hrml LSHFT S   &hrml LEFT_COMMAND T  &kp G             &kp M           &hrmr RIGHT_GUI N  &hrmr RSHFT E  &hrmr_hold_trigger RIGHT_ALT I  &hrmr_hold_trigger RCTRL O  &lt 4 SQT
+&kp TAB           &kp Q                       &kp W                          &kp F           &kp P                 &kp B             &kp J           &kp L              &kp U          &kp Y                           &kp SQT                     &kp BACKSLASH
+&lt 4 ESCAPE      &hmrl_hold_trigger LCTRL A  &hmrl_hold_trigger LEFT_ALT R  &hrml LSHFT S   &hrml LEFT_COMMAND T  &kp G             &kp M           &hrmr RIGHT_GUI N  &hrmr RSHFT E  &hrmr_hold_trigger RIGHT_ALT I  &hrmr_hold_trigger RCTRL O  &lt 4 SQT
 &kp LEFT_CONTROL  &kp Z                       &kp X                          &kp C           &kp D                 &kp V             &kp K           &kp H              &kp COMMA      &kp PERIOD                      &lt 7 SLASH                 &trans
                                                                              &kp LEFT_SHIFT  &lt 2 BACKSPACE       &lt_ph 3 ENTER    &lt_ph 3 ENTER  &lt 2 SPACE
             >;
@@ -156,8 +156,8 @@
 
         GAME {
             bindings = <
-&kp ESCAPE  &kp I           &kp Q  &kp W  &kp E      &kp R             &trans  &trans  &trans  &trans  &trans  &trans
-&kp TAB     &kp LEFT_SHIFT  &kp A  &kp S  &kp D      &kp F             &trans  &trans  &trans  &trans  &trans  &trans
+&kp TAB     &kp I           &kp Q  &kp W  &kp E      &kp R             &trans  &trans  &trans  &trans  &trans  &trans
+&kp ESCAPE  &kp LEFT_SHIFT  &kp A  &kp S  &kp D      &kp F             &trans  &trans  &trans  &trans  &trans  &trans
 &kp LCTRL   &kp Z           &kp X  &kp C  &kp M      &kp V             &trans  &trans  &trans  &trans  &trans  &trans
                                    &mo 2  &kp SPACE  &lt_ph 3 ENTER    &trans  &trans
             >;
@@ -165,8 +165,8 @@
 
         NAV {
             bindings = <
-&kp ESC    &trans     &kp BSPC  &kp UP_ARROW  &kp DEL    &kp LBKT                &kp RBKT               &kp GRAVE       &kp PLUS       &kp PIPE          &kp COLON     &kp PIPE
-&kp TAB    &kp LSHFT  &kp LEFT  &kp DOWN      &kp RIGHT  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp MINUS       &kp EQUAL      &kp BSLH          &kp SEMI      &kp DOUBLE_QUOTES
+&trans     &trans     &kp BSPC  &kp UP_ARROW  &kp DEL    &kp LBKT                &kp RBKT               &kp GRAVE       &kp PLUS       &kp PIPE          &kp COLON     &kp PIPE
+&trans     &kp LSHFT  &kp LEFT  &kp DOWN      &kp RIGHT  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp MINUS       &kp EQUAL      &kp BSLH          &kp SEMI      &kp DOUBLE_QUOTES
 &kp LCTRL  &kp LGUI   &trans    &kp HOME      &kp END    &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp UNDERSCORE  &kp LESS_THAN  &kp GREATER_THAN  &kp QUESTION  &kp RET
                                 &trans        &kp SPACE  &trans                  &trans                 &trans
             >;
