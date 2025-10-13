@@ -16,13 +16,13 @@ layers:
   - {t: TAB, h: SYS}
   - {t: A, h: LCTRL}
   - {t: R, h: LEFT ALT}
-  - {t: S, h: LSHFT}
-  - {t: T, h: LEFT COMMAND}
+  - {t: S, h: LEFT WIN}
+  - {t: T, h: LEFT SHIFT}
   - G
   - M
-  - {t: N, h: RIGHT GUI}
-  - {t: E, h: RSHFT}
-  - {t: I, h: RIGHT ALT}
+  - {t: N, h: RIGHT SHIFT}
+  - {t: E, h: RIGHT GUI}
+  - {t: I, h: LEFT ALT}
   - {t: O, h: RCTRL}
   - {t: '''', h: SYS}
   - LEFT CONTROL
@@ -104,10 +104,10 @@ layers:
   - RIGHT
   - (
   - )
-  - '-'
-  - '='
-  - \
-  - ;
+  - {t: '-', h: RIGHT SHIFT}
+  - {t: '=', h: RIGHT WIN}
+  - {t: \, h: LEFT ALT}
+  - {t: ;, h: RCTRL}
   - '"'
   - LCTRL
   - LGUI
@@ -140,16 +140,16 @@ layers:
   - )
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '1'
-  - '2'
-  - '3'
-  - '4'
+  - {t: '1', h: LCTRL}
+  - {t: '2', h: LEFT ALT}
+  - {t: '3', h: LEFT WIN}
+  - {t: '4', h: LEFT SHIFT}
   - '5'
   - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
+  - {t: '7', h: RIGHT SHIFT}
+  - {t: '8', h: RIGHT WIN}
+  - {t: '9', h: LEFT ALT}
+  - {t: '0', h: RCTRL}
   - {t: ▽, type: trans}
   - DEV TOOLS
   - F1
