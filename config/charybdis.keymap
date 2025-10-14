@@ -78,7 +78,7 @@
         hrmr_hold_trigger: homerow_right_hold_trigger {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             tapping-term-ms = <300>;
             quick-tap-ms = <100>;
             require-prior-idle-ms = <75>;
@@ -91,7 +91,7 @@
         hmrl_hold_trigger: homerow_left_hold_trigger {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             tapping-term-ms = <300>;
             quick-tap-ms = <100>;
             require-prior-idle-ms = <75>;
