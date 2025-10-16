@@ -44,7 +44,7 @@
     behaviors {
         compatible = "zmk,behaviors";
 
-        hrmr: homerow_mod_right {
+        hrm_tap: homerow_mod_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -53,7 +53,7 @@
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
 
-            label = "homerow_mod_right";
+            label = "homerow_mod_tap";
             retro-tap;
             hold-trigger-on-release;
         };
@@ -163,10 +163,10 @@
 
         BASE {
             bindings = <
-&kp ESC           &kp Q               &kp W                  &kp F                     &kp P               &kp B             &kp J           &kp L                &kp U              &kp Y                  &kp SQT             &kp BACKSLASH
-&lt 4 TAB         &hmrl_fast LCTRL A  &hmrl_fast LEFT_ALT R  &hrml LEFT_WIN S          &hrml LEFT_SHIFT T  &kp G             &kp M           &hrmr RIGHT_SHIFT N  &hrmr RIGHT_GUI E  &hrmr_fast LEFT_ALT I  &hrmr_fast RCTRL O  &lt 4 SQT
-&kp LEFT_CONTROL  &kp Z               &kp X                  &kp C                     &kp D               &kp V             &kp K           &kp H                &kp COMMA          &kp PERIOD             &lt 7 SLASH         &trans
-                                                             &mt_ph LEFT_SHIFT ESCAPE  &lt 2 BACKSPACE     &lt_ph 3 ENTER    &lt_ph 3 ENTER  &lt 2 SPACE
+&kp ESC           &kp Q               &kp W                &kp F                     &kp P                  &kp B             &kp J           &kp L                   &kp U                 &kp Y                &kp SQT             &kp BACKSLASH
+&lt 4 TAB         &hmrl_fast LCTRL A  &hrm_tap LEFT_ALT R  &hrm_tap LEFT_WIN S       &hrm_tap LEFT_SHIFT T  &kp G             &kp M           &hrm_tap RIGHT_SHIFT N  &hrm_tap RIGHT_GUI E  &hrm_tap LEFT_ALT I  &hrmr_fast RCTRL O  &lt 4 SQT
+&kp LEFT_CONTROL  &kp Z               &kp X                &kp C                     &kp D                  &kp V             &kp K           &kp H                   &kp COMMA             &kp PERIOD           &lt 7 SLASH         &trans
+                                                           &mt_ph LEFT_SHIFT ESCAPE  &lt 2 BACKSPACE        &lt_ph 3 ENTER    &lt_ph 3 ENTER  &lt 2 SPACE
             >;
         };
 
@@ -181,19 +181,19 @@
 
         NAV {
             bindings = <
-&trans     &trans     &kp BSPC  &kp UP_ARROW  &kp DEL    &kp LBKT                &kp RBKT               &kp GRAVE                     &kp PLUS                    &kp PIPE                  &kp COLON              &kp PIPE
-&trans     &kp LSHFT  &kp LEFT  &kp DOWN      &kp RIGHT  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &hrmr_fast RIGHT_SHIFT MINUS  &hrmr_fast RIGHT_WIN EQUAL  &hrmr_fast LEFT_ALT BSLH  &hrmr_fast RCTRL SEMI  &kp DOUBLE_QUOTES
-&kp LCTRL  &kp LGUI   &trans    &kp HOME      &kp END    &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp UNDERSCORE                &kp LESS_THAN               &kp GREATER_THAN          &kp QUESTION           &kp RET
+&trans     &trans     &kp BSPC  &kp UP_ARROW  &kp DEL    &kp LBKT                &kp RBKT               &kp GRAVE                   &kp PLUS                  &kp PIPE                &kp COLON            &kp PIPE
+&trans     &kp LSHFT  &kp LEFT  &kp DOWN      &kp RIGHT  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &hrm_tap RIGHT_SHIFT MINUS  &hrm_tap RIGHT_WIN EQUAL  &hrm_tap LEFT_ALT BSLH  &hrm_tap RCTRL SEMI  &kp DOUBLE_QUOTES
+&kp LCTRL  &kp LGUI   &trans    &kp HOME      &kp END    &kp LEFT_BRACE          &kp RIGHT_BRACE        &kp UNDERSCORE              &kp LESS_THAN             &kp GREATER_THAN        &kp QUESTION         &kp RET
                                 &trans        &kp SPACE  &trans                  &trans                 &trans
             >;
         };
 
         NUM {
             bindings = <
-&trans   &kp EXCLAMATION      &kp AT_SIGN             &kp HASH                &kp DOLLAR                &kp PERCENT    &kp CARET  &kp AMPERSAND              &kp ASTERISK             &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &trans
-&trans   &hmrl_fast LCTRL N1  &hmrl_fast LEFT_ALT N2  &hmrl_fast LEFT_WIN N3  &hmrl_fast LEFT_SHIFT N4  &kp N5         &kp N6     &hrmr_fast RIGHT_SHIFT N7  &hrmr_fast RIGHT_WIN N8  &hrmr_fast LEFT_ALT N9  &hrmr_fast RCTRL N0    &trans
-&kp F12  &kp F1               &kp F2                  &kp F3                  &kp F4                    &kp F5         &kp F6     &kp F7                     &kp F8                   &kp F9                  &kp F10                &kp F11
-                                                      &trans                  &trans                    &trans         &trans     &trans
+&trans   &kp EXCLAMATION    &kp AT_SIGN           &kp HASH              &kp DOLLAR              &kp PERCENT    &kp CARET  &kp AMPERSAND            &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans   &hrm_tap LCTRL N1  &hrm_tap LEFT_ALT N2  &hrm_tap LEFT_WIN N3  &hrm_tap LEFT_SHIFT N4  &kp N5         &kp N6     &hrm_tap RIGHT_SHIFT N7  &hrm_tap RIGHT_WIN N8  &hrm_tap LEFT_ALT N9  &hrm_tap RCTRL N0      &trans
+&kp F12  &kp F1             &kp F2                &kp F3                &kp F4                  &kp F5         &kp F6     &kp F7                   &kp F8                 &kp F9                &kp F10                &kp F11
+                                                  &trans                &trans                  &trans         &trans     &trans
             >;
         };
 
