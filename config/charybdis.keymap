@@ -47,14 +47,13 @@
         hrm_balanced: homerow_mod_balanced {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
 
             label = "homerow_mod_balanced";
-            retro-tap;
             hold-trigger-on-release;
         };
 
