@@ -147,10 +147,10 @@
 
         BASE {
             bindings = <
-&kp ESC           &kp Q               &kp W                &kp F                     &kp P                  &kp B             &kp J           &kp L                   &kp U                 &kp Y                &kp SQT             &kp BACKSLASH
-&lt 4 TAB         &hmrl_hold LCTRL A  &hrm_tap LEFT_ALT R  &hrm_tap LEFT_WIN S       &hrm_tap LEFT_SHIFT T  &kp G             &kp M           &hrm_tap RIGHT_SHIFT N  &hrm_tap RIGHT_GUI E  &hrm_tap LEFT_ALT I  &hrmr_hold RCTRL O  &lt 4 SQT
-&kp LEFT_CONTROL  &kp Z               &kp X                &kp C                     &kp D                  &kp V             &kp K           &kp H                   &kp COMMA             &kp PERIOD           &lt 7 SLASH         &trans
-                                                           &mt_ph LEFT_SHIFT ESCAPE  &lt 2 BACKSPACE        &lt_ph 3 ENTER    &lt_ph 3 ENTER  &lt 2 SPACE
+&kp ESC           &kp Q               &kp W                  &kp F                     &kp P                  &kp B             &kp J           &kp L                   &kp U                 &kp Y                  &kp SQT             &kp BACKSLASH
+&lt 4 TAB         &hmrl_hold LCTRL A  &hmrl_hold LEFT_ALT R  &hrm_tap LEFT_WIN S       &hrm_tap LEFT_SHIFT T  &kp G             &kp M           &hrm_tap RIGHT_SHIFT N  &hrm_tap RIGHT_GUI E  &hrmr_hold LEFT_ALT I  &hrmr_hold RCTRL O  &lt 4 SQT
+&kp LEFT_CONTROL  &kp Z               &kp X                  &kp C                     &kp D                  &kp V             &kp K           &kp H                   &kp COMMA             &kp PERIOD             &lt 7 SLASH         &trans
+                                                             &mt_ph LEFT_SHIFT ESCAPE  &lt 2 BACKSPACE        &lt_ph 3 ENTER    &lt_ph 3 ENTER  &lt 2 SPACE
             >;
         };
 
