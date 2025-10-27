@@ -149,19 +149,19 @@
 
         BASE {
             bindings = <
-&kp ESC           &kp Q                   &kp W                      &kp F                      &kp P                        &kp B             &kp J           &kp L                         &kp U                       &kp Y                      &kp SQT                 &kp BACKSLASH
-&lt 4 TAB         &hmrl_balanced LCTRL A  &hmrl_balanced LEFT_ALT R  &hmrl_balanced LEFT_WIN S  &hmrl_balanced LEFT_SHIFT T  &kp G             &kp M           &hrmr_balanced RIGHT_SHIFT N  &hrmr_balanced RIGHT_GUI E  &hrmr_balanced LEFT_ALT I  &hrmr_balanced RCTRL O  &lt 4 SQT
+&kp TAB           &kp Q                   &kp W                      &kp F                      &kp P                        &kp B             &kp J           &kp L                         &kp U                       &kp Y                      &kp SQT                 &kp BACKSLASH
+&lt 4 ESC         &hmrl_balanced LCTRL A  &hmrl_balanced LEFT_ALT R  &hmrl_balanced LEFT_WIN S  &hmrl_balanced LEFT_SHIFT T  &kp G             &kp M           &hrmr_balanced RIGHT_SHIFT N  &hrmr_balanced RIGHT_GUI E  &hrmr_balanced LEFT_ALT I  &hrmr_balanced RCTRL O  &lt 4 SQT
 &kp LEFT_CONTROL  &kp Z                   &kp X                      &kp C                      &kp D                        &kp V             &kp K           &kp H                         &kp COMMA                   &kp PERIOD                 &lt 7 SLASH             &trans
-                                                                     &mt_ph LEFT_SHIFT ESCAPE   &lt 2 BACKSPACE              &lt_ph 3 ENTER    &lt_ph 3 ENTER  &lt 2 SPACE
+                                                                     &kp LEFT_SHIFT             &lt 2 BACKSPACE              &lt_ph 3 ENTER    &lt_ph 3 ENTER  &lt 2 SPACE
             >;
         };
 
         GAME {
             bindings = <
-&kp ESCAPE  &kp I           &kp Q  &kp W  &kp E      &kp R             &trans  &trans  &trans  &trans  &trans  &trans
-&kp TAB     &kp LEFT_SHIFT  &kp A  &kp S  &kp D      &kp F             &trans  &trans  &trans  &trans  &trans  &trans
-&kp LCTRL   &kp Z           &kp X  &kp C  &kp M      &kp V             &trans  &trans  &trans  &trans  &trans  &trans
-                                   &mo 2  &kp SPACE  &lt_ph 3 ENTER    &trans  &trans
+&kp TAB    &kp I           &kp Q  &kp W  &kp E      &kp R             &trans  &trans  &trans  &trans  &trans  &trans
+&kp ESC    &kp LEFT_SHIFT  &kp A  &kp S  &kp D      &kp F             &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL  &kp Z           &kp X  &kp C  &kp M      &kp V             &trans  &trans  &trans  &trans  &trans  &trans
+                                  &mo 2  &kp SPACE  &lt_ph 3 ENTER    &trans  &trans
             >;
         };
 
