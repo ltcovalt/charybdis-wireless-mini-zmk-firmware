@@ -142,6 +142,11 @@
             bindings = <&mo 6>;
             key-positions = <31 32 33>;
         };
+
+        mo_num {
+            bindings = <&mo 3>;
+            key-positions = <37 40>;
+        };
     };
 
     keymap {
