@@ -351,3 +351,5 @@ combos:
   k: SCROLL
 - p: [31, 32, 33]
   k: SCROLL
+- p: [37, 40]
+  k: NUM
