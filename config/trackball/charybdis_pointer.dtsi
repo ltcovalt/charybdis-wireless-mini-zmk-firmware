@@ -22,7 +22,7 @@
 
 	snipe {
 		/* slow scroll on NAV and SNIPE layers */
-		layers = <2 7>;
+		layers = <2 8>;
 		input-processors = <
 			&zip_xy_scaler 1 5
 		>;
@@ -30,7 +30,7 @@
 
 	scroll {
 		/* trackball scroll on NUM and SCROLL layer */
-		layers = <3 6>;
+		layers = <3 7>;
 		input-processors = <
 			&zip_xy_to_scroll_mapper /* convert xy movement to scroll events */
 			&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT /* invert vertical scroll direction */
