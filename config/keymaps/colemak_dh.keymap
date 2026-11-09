@@ -1,3 +1,4 @@
+
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors/mouse_keys.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
@@ -110,14 +111,14 @@
         left_click_l {
             bindings = <&mkp LCLK>;
             key-positions = <16 15>;
-            layers = <0 5 7 2 3>;
+            layers = <0 6 8 2 3>;
             require-prior-idle-ms = <100>;
         };
 
         right_click_l {
             bindings = <&mkp RCLK>;
             key-positions = <14 15>;
-            layers = <0 5 7 2 3>;
+            layers = <0 6 8 2 3>;
             require-prior-idle-ms = <100>;
         };
 
@@ -134,12 +135,12 @@
         };
 
         scroll_l {
-            bindings = <&mo 6>;
+            bindings = <&mo 7>;
             key-positions = <14 15 16>;
         };
 
         scroll_r {
-            bindings = <&mo 6>;
+            bindings = <&mo 7>;
             key-positions = <31 32 33>;
         };
 
@@ -155,8 +156,8 @@
         BASE {
             bindings = <
 &kp TAB           &kp Q                   &kp W                      &kp F                      &kp P                        &kp B             &kp J           &kp L                         &kp U                       &kp Y                      &kp SQT                 &kp BACKSLASH
-&lt 4 ESC         &hmrl_balanced LCTRL A  &hmrl_balanced LEFT_ALT R  &hmrl_balanced LEFT_WIN S  &hmrl_balanced LEFT_SHIFT T  &kp G             &kp M           &hrmr_balanced RIGHT_SHIFT N  &hrmr_balanced RIGHT_GUI E  &hrmr_balanced LEFT_ALT I  &hrmr_balanced RCTRL O  &lt 4 SQT
-&kp LEFT_CONTROL  &kp Z                   &kp X                      &kp C                      &kp D                        &kp V             &kp K           &kp H                         &kp COMMA                   &kp PERIOD                 &lt 7 SLASH             &trans
+&lt 5 ESC         &hmrl_balanced LCTRL A  &hmrl_balanced LEFT_ALT R  &hmrl_balanced LEFT_WIN S  &hmrl_balanced LEFT_SHIFT T  &kp G             &kp M           &hrmr_balanced RIGHT_SHIFT N  &hrmr_balanced RIGHT_GUI E  &hrmr_balanced LEFT_ALT I  &hrmr_balanced RCTRL O  &lt 5 SQT
+&kp LEFT_CONTROL  &kp Z                   &kp X                      &kp C                      &kp D                        &kp V             &kp K           &kp H                         &kp COMMA                   &kp PERIOD                 &lt 8 SLASH             &trans
                                                                      &kp LEFT_SHIFT             &lt 2 BACKSPACE              &lt_ph 3 ENTER    &lt_ph 3 ENTER  &lt 2 SPACE
             >;
         };
@@ -166,7 +167,7 @@
 &kp TAB    &kp I           &kp Q  &kp W  &kp E      &kp R             &trans  &trans  &trans  &trans  &trans  &trans
 &kp ESC    &kp LEFT_SHIFT  &kp A  &kp S  &kp D      &kp F             &trans  &trans  &trans  &trans  &trans  &trans
 &kp LCTRL  &kp Z           &kp X  &kp C  &kp M      &kp V             &trans  &trans  &trans  &trans  &trans  &trans
-                                  &mo 2  &kp SPACE  &lt_ph 3 ENTER    &trans  &trans
+                                  &mo 2  &kp SPACE  &lt_ph 4 ENTER    &trans  &trans
             >;
         };
 
@@ -185,6 +186,15 @@
 &trans   &hrm_tap LCTRL N1  &hrm_tap LEFT_ALT N2  &hrm_tap LEFT_WIN N3  &hrm_tap LEFT_SHIFT N4  &kp N5         &kp N6     &hrm_tap RIGHT_SHIFT N7  &hrm_tap RIGHT_WIN N8  &hrm_tap LEFT_ALT N9  &hrm_tap RCTRL N0      &trans
 &kp F12  &kp F1             &kp F2                &kp F3                &kp F4                  &kp F5         &kp F6     &kp F7                   &kp F8                 &kp F9                &kp F10                &kp F11
                                                   &trans                &trans                  &trans         &trans     &trans
+            >;
+        };
+
+        NUM_GAME {
+            bindings = <
+&trans   &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans   &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5         &kp N6     &kp N7         &kp N8        &kp N9                &kp N0                 &trans
+&kp F12  &kp F1           &kp F2        &kp F3        &kp F4        &kp F5         &kp F6     &kp F7         &kp F8        &kp F9                &kp F10                &kp F11
+                                        &trans        &trans        &trans         &trans     &trans
             >;
         };
 
