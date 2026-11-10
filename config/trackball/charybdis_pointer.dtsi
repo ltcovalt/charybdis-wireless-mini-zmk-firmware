@@ -3,15 +3,13 @@
 
 / {
 	/* 
-	 * auto-mouse layer definition with movement threshold
+	 * auto-mouse layer definition
 	 * Layer 6 is MOUSE in colemak_dh.keymap
 	 */
 	zip_temp_layer: zip_temp_layer {
-		compatible = "zmk,input-processor-temp-layer-threshold";
+		compatible = "zmk,input-processor-temp-layer";
 		#input-processor-cells = <2>;
-		threshold = <10>;
 		require-prior-idle-ms = <400>;
-		reset-timeout-ms = <200>;
 		excluded-positions = <31 32 33>; /* Only H, comma, period */
 	};
 };
@@ -20,14 +18,14 @@
 	/* base processor chain on all layers */
 	input-processors = <
 		&zip_temp_layer 6 350
-		&zip_xy_scaler 5 16 /* scale cursor speed (adjusted for 1600 CPI) */
+		&zip_xy_scaler 5 8 /* scale cursor speed (800 CPI) */
 	>;
 
 	snipe {
 		/* slow cursor on NAV layer */
 		layers = <2>;
 		input-processors = <
-			&zip_xy_scaler 1 10
+			&zip_xy_scaler 1 5
 		>;
 	};
 
@@ -37,7 +35,7 @@
 		input-processors = <
 			&zip_xy_to_scroll_mapper /* convert xy movement to scroll events */
 			&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT /* invert vertical scroll direction */
-			&zip_scroll_scaler 1 96 /* scale scroll speed (adjusted for 1600 CPI) */
+			&zip_scroll_scaler 1 48 /* scale scroll speed (800 CPI) */
 		>;
 	};
 };

@@ -4,8 +4,6 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: 280Zo
       url-base: https://github.com/280Zo
-    - name: yamaryu211
-      url-base: https://github.com/yamaryu211
 
   projects:
     - name: zmk
@@ -17,9 +15,6 @@ manifest:
       revision: main
     - name: prospector-zmk-module
       remote: 280Zo
-      revision: main
-    - name: zmk-input-processor-temp-layer-threshold
-      remote: yamaryu211
       revision: main
 
   self:
