@@ -166,7 +166,7 @@
             bindings = <
 &kp TAB    &kp I           &kp Q  &kp W  &kp E      &kp R             &trans  &trans  &trans  &trans  &trans  &trans
 &kp ESC    &kp LEFT_SHIFT  &kp A  &kp S  &kp D      &kp F             &trans  &trans  &trans  &trans  &trans  &trans
-&kp LCTRL  &kp Z           &kp X  &kp C  &kp M      &kp V             &mkp MB4  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB5  &trans
+&kp LCTRL  &kp Z           &kp X  &kp C  &kp M      &kp V             &trans    &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans    &trans
                                   &mo 2  &kp SPACE  &lt_ph 4 ENTER    &trans  &trans
             >;
         };
@@ -211,7 +211,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &trans     &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &mkp MB4  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB5  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans    &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans    &trans
                         &trans  &trans  &trans    &trans  &trans
             >;
         };

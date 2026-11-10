@@ -3,14 +3,16 @@
 
 / {
 	/* 
-	 * auto-mouse layer definition
+	 * auto-mouse layer definition with movement threshold
 	 * Layer 6 is MOUSE in colemak_dh.keymap
 	 */
 	zip_temp_layer: zip_temp_layer {
-		compatible = "zmk,input-processor-temp-layer";
+		compatible = "zmk,input-processor-temp-layer-threshold";
 		#input-processor-cells = <2>;
-		require-prior-idle-ms = <200>;
-		excluded-positions = <30 31 32 33 34 24 36 37 38>;
+		threshold = <10>;
+		require-prior-idle-ms = <400>;
+		reset-timeout-ms = <200>;
+		excluded-positions = <31 32 33>; /* Only H, comma, period */
 	};
 };
 
@@ -25,7 +27,6 @@
 		/* slow cursor on NAV layer */
 		layers = <2>;
 		input-processors = <
-			&zip_temp_layer 6 350
 			&zip_xy_scaler 1 10
 		>;
 	};
