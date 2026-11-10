@@ -111,14 +111,14 @@
         left_click_l {
             bindings = <&mkp LCLK>;
             key-positions = <16 15>;
-            layers = <0 6 8 2 3>;
+            layers = <0 6 2 3>;
             require-prior-idle-ms = <100>;
         };
 
         right_click_l {
             bindings = <&mkp RCLK>;
             key-positions = <14 15>;
-            layers = <0 6 8 2 3>;
+            layers = <0 6 2 3>;
             require-prior-idle-ms = <100>;
         };
 
@@ -157,7 +157,7 @@
             bindings = <
 &kp TAB           &kp Q                   &kp W                      &kp F                      &kp P                        &kp B             &kp J           &kp L                         &kp U                       &kp Y                      &kp SQT                 &kp BACKSLASH
 &lt 5 ESC         &hmrl_balanced LCTRL A  &hmrl_balanced LEFT_ALT R  &hmrl_balanced LEFT_WIN S  &hmrl_balanced LEFT_SHIFT T  &kp G             &kp M           &hrmr_balanced RIGHT_SHIFT N  &hrmr_balanced RIGHT_GUI E  &hrmr_balanced LEFT_ALT I  &hrmr_balanced RCTRL O  &lt 5 SQT
-&kp LEFT_CONTROL  &kp Z                   &kp X                      &kp C                      &kp D                        &kp V             &kp K           &kp H                         &kp COMMA                   &kp PERIOD                 &lt 8 SLASH             &trans
+&kp LEFT_CONTROL  &kp Z                   &kp X                      &kp C                      &kp D                        &kp V             &kp K           &kp H                         &kp COMMA                   &kp PERIOD                 &kp SLASH               &trans
                                                                      &kp LEFT_SHIFT             &lt 2 BACKSPACE              &lt_ph 3 ENTER    &lt_ph 3 ENTER  &lt 2 SPACE
             >;
         };
@@ -166,7 +166,7 @@
             bindings = <
 &kp TAB    &kp I           &kp Q  &kp W  &kp E      &kp R             &trans  &trans  &trans  &trans  &trans  &trans
 &kp ESC    &kp LEFT_SHIFT  &kp A  &kp S  &kp D      &kp F             &trans  &trans  &trans  &trans  &trans  &trans
-&kp LCTRL  &kp Z           &kp X  &kp C  &kp M      &kp V             &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL  &kp Z           &kp X  &kp C  &kp M      &kp V             &mkp MB4  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB5  &trans
                                   &mo 2  &kp SPACE  &lt_ph 4 ENTER    &trans  &trans
             >;
         };
@@ -209,9 +209,9 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &mkp MB4  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB5  &trans
                         &trans  &trans  &trans    &trans  &trans
             >;
         };
@@ -225,13 +225,5 @@
             >;
         };
 
-        SNIPE {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans
-            >;
-        };
     };
 };

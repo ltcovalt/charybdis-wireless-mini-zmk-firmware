@@ -4,27 +4,29 @@
 / {
 	/* 
 	 * auto-mouse layer definition
-	 * to auto-enable, add <&zip_temp_layer 5 1000> to input-processors
-	 * of the trackball_listener, where 5 is the mouse layer and 1000 is the timeout in ms
+	 * Layer 6 is MOUSE in colemak_dh.keymap
 	 */
 	zip_temp_layer: zip_temp_layer {
 		compatible = "zmk,input-processor-temp-layer";
 		#input-processor-cells = <2>;
-		require-prior-idle-ms = <1000>;
+		require-prior-idle-ms = <200>;
+		excluded-positions = <30 31 32 33 34 24 36 37 38>;
 	};
 };
 
 &trackball_listener {
 	/* base processor chain on all layers */
 	input-processors = <
-		&zip_xy_scaler 5 8 /* scale cursor speed, max values are 16/16 */
+		&zip_temp_layer 6 350
+		&zip_xy_scaler 5 16 /* scale cursor speed (adjusted for 1600 CPI) */
 	>;
 
 	snipe {
-		/* slow scroll on NAV and SNIPE layers */
-		layers = <2 8>;
+		/* slow cursor on NAV layer */
+		layers = <2>;
 		input-processors = <
-			&zip_xy_scaler 1 5
+			&zip_temp_layer 6 350
+			&zip_xy_scaler 1 10
 		>;
 	};
 
@@ -34,7 +36,7 @@
 		input-processors = <
 			&zip_xy_to_scroll_mapper /* convert xy movement to scroll events */
 			&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT /* invert vertical scroll direction */
-			&zip_scroll_scaler 1 48 /* scale scroll speed */
+			&zip_scroll_scaler 1 96 /* scale scroll speed (adjusted for 1600 CPI) */
 		>;
 	};
 };
