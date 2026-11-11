@@ -4,13 +4,13 @@
 / {
 	/*
 	 * deadzone filter: suppresses typing vibration micro-movements
-	 * requires cumulative movement >= 32 counts before passing events through (1600 CPI)
+	 * requires cumulative movement >= 40 counts before passing events through (1600 CPI)
 	 */
 	zip_deadzone: zip_deadzone {
 		compatible = "zmk,input-processor-deadzone";
 		#input-processor-cells = <0>;
-		threshold = <32>;
-		timeout-ms = <50>;
+		threshold = <40>;
+		timeout-ms = <40>;
 	};
 
 	/* 
