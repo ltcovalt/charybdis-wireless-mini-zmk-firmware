@@ -9,7 +9,7 @@
 	zip_temp_layer: zip_temp_layer {
 		compatible = "zmk,input-processor-temp-layer";
 		#input-processor-cells = <2>;
-		require-prior-idle-ms = <400>;
+		require-prior-idle-ms = <500>;
 		excluded-positions = <31 32 33>; /* Only H, comma, period */
 	};
 };
@@ -17,7 +17,7 @@
 &trackball_listener {
 	/* base processor chain on all layers */
 	input-processors = <
-		&zip_temp_layer 6 350
+		&zip_temp_layer 6 500
 		&zip_xy_scaler 5 8 /* scale cursor speed (800 CPI) */
 	>;
 
@@ -25,6 +25,7 @@
 		/* slow cursor on NAV layer */
 		layers = <2>;
 		input-processors = <
+			&zip_temp_layer 6 500
 			&zip_xy_scaler 1 5
 		>;
 	};
