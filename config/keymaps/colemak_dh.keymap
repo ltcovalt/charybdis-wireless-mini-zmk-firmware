@@ -148,6 +148,24 @@
             bindings = <&mo 3>;
             key-positions = <37 40>;
         };
+
+        game_t {
+            bindings = <&kp T>;
+            key-positions = <25 26>;
+            layers = <1>;
+        };
+
+        game_g {
+            bindings = <&kp G>;
+            key-positions = <26 27>;
+            layers = <1>;
+        };
+
+        game_b {
+            bindings = <&kp B>;
+            key-positions = <27 28>;
+            layers = <1>;
+        };
     };
 
     keymap {
@@ -164,10 +182,10 @@
 
         GAME {
             bindings = <
-&kp TAB    &kp I           &kp Q  &kp W  &kp E      &kp R             &trans  &trans  &trans  &trans  &trans  &trans
-&kp ESC    &kp LEFT_SHIFT  &kp A  &kp S  &kp D      &kp F             &trans  &trans  &trans  &trans  &trans  &trans
-&kp LCTRL  &kp Z           &kp X  &kp C  &kp M      &kp V             &trans    &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans    &trans
-                                  &mo 2  &kp SPACE  &lt_ph 4 ENTER    &trans  &trans
+&kp TAB    &kp I           &kp Q  &kp W  &kp E         &kp R             &trans  &trans     &trans     &trans     &trans  &trans
+&kp ESC    &kp LEFT_SHIFT  &kp A  &kp S  &kp D         &kp F             &trans  &kp T      &kp G      &kp B      &trans  &trans
+&kp LCTRL  &kp M           &kp Z  &kp X  &kp C         &kp V             &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans
+                                  &kp LEFT_ALT  &kp SPACE  &lt_ph 4 ENTER    &mo 2   &trans
             >;
         };
 

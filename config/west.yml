@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: 280Zo
       url-base: https://github.com/280Zo
+    - name: t-ogura
+      url-base: https://github.com/t-ogura
 
   projects:
     - name: zmk
@@ -15,6 +17,9 @@ manifest:
       revision: main
     - name: prospector-zmk-module
       remote: 280Zo
+      revision: main
+    - name: zmk-input-processor-deadzone
+      remote: t-ogura
       revision: main
 
   self:

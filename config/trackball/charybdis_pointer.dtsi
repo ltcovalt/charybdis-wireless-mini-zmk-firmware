@@ -2,6 +2,17 @@
 #include <dt-bindings/zmk/input_transform.h>
 
 / {
+	/*
+	 * deadzone filter: suppresses typing vibration micro-movements
+	 * requires cumulative movement >= 10 counts before passing events through
+	 */
+	zip_deadzone: zip_deadzone {
+		compatible = "zmk,input-processor-deadzone";
+		#input-processor-cells = <0>;
+		threshold = <10>;
+		timeout-ms = <300>;
+	};
+
 	/* 
 	 * auto-mouse layer definition
 	 * Layer 6 is MOUSE in colemak_dh.keymap
@@ -17,6 +28,7 @@
 &trackball_listener {
 	/* base processor chain on all layers */
 	input-processors = <
+		&zip_deadzone
 		&zip_temp_layer 6 500
 		&zip_xy_scaler 5 8 /* scale cursor speed (800 CPI) */
 	>;
@@ -25,6 +37,7 @@
 		/* slow cursor on NAV layer */
 		layers = <2>;
 		input-processors = <
+			&zip_deadzone
 			&zip_temp_layer 6 500
 			&zip_xy_scaler 1 5
 		>;
@@ -34,6 +47,7 @@
 		/* trackball scroll on NUM and SCROLL layer */
 		layers = <3 7>;
 		input-processors = <
+			&zip_deadzone
 			&zip_xy_to_scroll_mapper /* convert xy movement to scroll events */
 			&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT /* invert vertical scroll direction */
 			&zip_scroll_scaler 1 48 /* scale scroll speed (800 CPI) */
