@@ -4,13 +4,13 @@
 / {
 	/*
 	 * deadzone filter: suppresses typing vibration micro-movements
-	 * requires cumulative movement >= 10 counts before passing events through
+	 * requires cumulative movement >= 28 counts before passing events through (1600 CPI)
 	 */
 	zip_deadzone: zip_deadzone {
 		compatible = "zmk,input-processor-deadzone";
 		#input-processor-cells = <0>;
-		threshold = <10>;
-		timeout-ms = <300>;
+		threshold = <28>;
+		timeout-ms = <150>;
 	};
 
 	/* 
@@ -30,7 +30,7 @@
 	input-processors = <
 		&zip_deadzone
 		&zip_temp_layer 6 500
-		&zip_xy_scaler 5 8 /* scale cursor speed (800 CPI) */
+		&zip_xy_scaler 5 16 /* scale cursor speed (1600 CPI) */
 	>;
 
 	snipe {
@@ -39,7 +39,7 @@
 		input-processors = <
 			&zip_deadzone
 			&zip_temp_layer 6 500
-			&zip_xy_scaler 1 5
+			&zip_xy_scaler 1 10
 		>;
 	};
 
@@ -50,7 +50,7 @@
 			&zip_deadzone
 			&zip_xy_to_scroll_mapper /* convert xy movement to scroll events */
 			&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT /* invert vertical scroll direction */
-			&zip_scroll_scaler 1 48 /* scale scroll speed (800 CPI) */
+			&zip_scroll_scaler 1 96 /* scale scroll speed (1600 CPI) */
 		>;
 	};
 };
