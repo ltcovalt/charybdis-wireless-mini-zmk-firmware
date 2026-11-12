@@ -108,20 +108,6 @@
     combos {
         compatible = "zmk,combos";
 
-        left_click_l {
-            bindings = <&mkp LCLK>;
-            key-positions = <16 15>;
-            layers = <0 6 2 3>;
-            require-prior-idle-ms = <100>;
-        };
-
-        right_click_l {
-            bindings = <&mkp RCLK>;
-            key-positions = <14 15>;
-            layers = <0 6 2 3>;
-            require-prior-idle-ms = <100>;
-        };
-
         left_click_r {
             bindings = <&mkp LCLK>;
             key-positions = <31 32>;
@@ -132,11 +118,6 @@
             bindings = <&mkp RCLK>;
             key-positions = <32 33>;
             require-prior-idle-ms = <100>;
-        };
-
-        scroll_l {
-            bindings = <&mo 7>;
-            key-positions = <14 15 16>;
         };
 
         scroll_r {
@@ -175,8 +156,8 @@
             bindings = <
 &kp TAB           &kp Q                   &kp W                      &kp F                      &kp P                        &kp B             &kp J           &kp L                         &kp U                       &kp Y                      &kp SQT                 &kp BACKSLASH
 &lt 5 ESC         &hmrl_balanced LCTRL A  &hmrl_balanced LEFT_ALT R  &hmrl_balanced LEFT_WIN S  &hmrl_balanced LEFT_SHIFT T  &kp G             &kp M           &hrmr_balanced RIGHT_SHIFT N  &hrmr_balanced RIGHT_GUI E  &hrmr_balanced LEFT_ALT I  &hrmr_balanced RCTRL O  &lt 5 SQT
-&kp LEFT_CONTROL  &kp Z                   &kp X                      &kp C                      &kp D                        &kp V             &kp K           &kp H                         &kp COMMA                   &kp PERIOD                 &kp SLASH               &trans
-                                                                     &kp LEFT_SHIFT             &lt 2 BACKSPACE              &lt_ph 3 ENTER    &lt_ph 3 ENTER  &lt 2 SPACE
+&kp LEFT_CONTROL  &kp Z                   &kp X                      &kp C                      &kp D                        &kp V             &kp K           &kp H                         &kp COMMA                   &kp PERIOD                 &kp SLASH               &kp ENTER
+                                                                     &kp LEFT_SHIFT             &lt 2 BACKSPACE              &lt_ph 3 ENTER    &kp ENTER       &lt 2 SPACE
             >;
         };
 
@@ -185,7 +166,7 @@
 &kp TAB    &kp I           &kp Q  &kp W  &kp E         &kp R             &trans  &trans     &trans     &trans     &trans  &trans
 &kp ESC    &kp LEFT_SHIFT  &kp A  &kp S  &kp D         &kp F             &trans  &kp T      &kp G      &kp B      &trans  &trans
 &kp LCTRL  &kp M           &kp Z  &kp X  &kp C         &kp V             &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans
-                                  &kp LEFT_ALT  &kp SPACE  &lt_ph 4 ENTER    &mo 2   &trans
+                                  &mo 2         &kp SPACE  &lt_ph 4 ENTER    &trans  &trans
             >;
         };
 
