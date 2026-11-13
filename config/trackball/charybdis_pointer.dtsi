@@ -38,7 +38,7 @@
 		layers = <2>;
 		input-processors = <
 			&zip_deadzone
-			&zip_temp_layer 6 500
+			&zip_temp_layer 6 800
 			&zip_xy_scaler 1 10
 		>;
 	};
