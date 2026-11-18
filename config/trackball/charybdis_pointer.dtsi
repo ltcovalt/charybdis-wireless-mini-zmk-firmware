@@ -4,13 +4,13 @@
 / {
 	/*
 	 * deadzone filter: suppresses typing vibration micro-movements
-	 * requires cumulative movement >= 40 counts before passing events through (1600 CPI)
+	 * requires cumulative movement >= 20 counts before passing events through (1600 CPI)
 	 */
 	zip_deadzone: zip_deadzone {
 		compatible = "zmk,input-processor-deadzone";
 		#input-processor-cells = <0>;
-		threshold = <40>;
-		timeout-ms = <40>;
+		threshold = <20>;
+		timeout-ms = <150>;
 	};
 
 	/* 
@@ -34,10 +34,9 @@
 	>;
 
 	snipe {
-		/* slow cursor on NAV layer */
+		/* slow cursor on NAV layer (deadzone bypassed for 1:1 precision micro-control) */
 		layers = <2>;
 		input-processors = <
-			&zip_deadzone
 			&zip_temp_layer 6 800
 			&zip_xy_scaler 1 10
 		>;
